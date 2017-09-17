@@ -219,8 +219,26 @@ Here's a [link to my video result](./project_video.mp4)
 
 ---
 
-### Discussion
+### Discussionfind_polynomial_lane_fit
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+
+
+
+
+
+
+### Discussion
+
+• Advanced Lane Line Project1
+https://chatbotslife.com/advanced-lane-line-project-7635ddca1960
+• More robust lane finding using advanced computer vision techniques1
+https://chatbotslife.com/robust-lane-finding-using-advanced-computer-vision-techniques-46875bb3c8aa
+
+• Self-Driving Car Project Q&A | Advanced Lane Finding
+https://www.youtube.com/watch?v=vWY8YUayf9Q&list=PLAwxTw4SYaPkz3HerxrHlu1Seq8ZA7-5P&index=4
+
+Radius of Curvature
+http://www.intmath.com/applications-differentiation/8-radius-curvature.php
