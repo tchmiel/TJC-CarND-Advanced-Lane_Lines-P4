@@ -392,9 +392,21 @@ The code for this step is located in the `./P4-Advanced-Lane-Lines-Final.ipynb`,
 `Determine the curvature of the lane and vehicle position with respect to center.`
 
 The `radius_of_curvature` method takes in a binary_image, and left and right fitted lane lines, and converts
-these lane lines in pixels to lanes lines in real world space in meters.  The problem statement stated
-we can assume 30 meters per 720 pixels in the 'y' dimension and 3.7 meters per 700 pixels in the 'x' direction.
-We then find new polynomials to x, y coordinates in world space.
+these lane lines in pixels to lanes lines in real world space in meters.  
+
+Using an auxilary `Pixels2MetersCalculation.ipynb`, and this image:
+![src_dst0.jpg](output_images/src_dst0.jpg)
+
+I visually observed the lane width on the warped image to be approximately 500 pixels wide, and the white dashed 
+line (spacing + dashed line + spacing) to be approximately 385 pixels high.  A standard US lane width is 3.7 
+meters  (12ft) wide and 3.04 meters (10 foot) dashes with 9 meter (30 foot) spacing in between dashes for dashed lines.  This 
+gives us a following meters per pixel ratios.  Using these ratios, we then find new polynomials to x, y coordinates in world space.
+~~~python
+    # 70ft  dashed space + dashed line + dashed space
+    ym_per_pix = 21.34/385    # meters per pixel in y dimension 
+    # 12ft lane in 500 pixels 
+    xm_per_pix = 3.7/500      # meters per pixel in y dimension 
+~~~
 
 Based on this article, [Radius of Curvature](http://www.intmath.com/applications-differentiation/8-radius-curvature.php), 
 we can then calculate the curve radius for both the left and right lanes, and then average them together to get
